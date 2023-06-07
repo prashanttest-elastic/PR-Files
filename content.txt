@@ -1,0 +1,298 @@
+      {
+        "_index": ".elastic-connectors-v1",
+        "_id": "-z7M5ocBvuvQJs4iEQ8V",
+        "_score": 1,
+        "_source": {
+          "api_key_id": "CjnM5ocBZtgZAcBxINyN",
+          "configuration": {
+            "account_email": {
+              "depends_on": [
+                {
+                  "field": "data_source",
+                  "value": "confluence_cloud"
+                }
+              ],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence Cloud account email",
+              "sensitive": false,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "praveen.kukreja@crestdatasys.com",
+              "order": 4,
+              "ui_restrictions": []
+            },
+            "password": {
+              "depends_on": [
+                {
+                  "field": "data_source",
+                  "value": "confluence_server"
+                }
+              ],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence Server password",
+              "sensitive": true,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "abc@123",
+              "order": 3,
+              "ui_restrictions": []
+            },
+            "confluence_url": {
+              "depends_on": [],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence URL",
+              "sensitive": false,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "https://praveenk.atlassian.net",
+              "order": 6,
+              "ui_restrictions": []
+            },
+            "concurrent_downloads": {
+              "depends_on": [],
+              "display": "numeric",
+              "tooltip": null,
+              "default_value": 50,
+              "label": "Maximum concurrent downloads",
+              "sensitive": false,
+              "type": "int",
+              "required": false,
+              "options": [],
+              "validations": [
+                {
+                  "constraint": 51,
+                  "type": "less_than"
+                }
+              ],
+              "value": 50,
+              "order": 11,
+              "ui_restrictions": [
+                "advanced"
+              ]
+            },
+            "ssl_ca": {
+              "depends_on": [
+                {
+                  "field": "ssl_enabled",
+                  "value": true
+                }
+              ],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "SSL certificate",
+              "sensitive": false,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "",
+              "order": 9,
+              "ui_restrictions": []
+            },
+            "ssl_enabled": {
+              "depends_on": [],
+              "display": "toggle",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Enable SSL",
+              "sensitive": false,
+              "type": "bool",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": false,
+              "order": 8,
+              "ui_restrictions": []
+            },
+            "api_token": {
+              "depends_on": [
+                {
+                  "field": "data_source",
+                  "value": "confluence_cloud"
+                }
+              ],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence Cloud API token",
+              "sensitive": true,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "oLHe3ftQtqd3R1Jjrsl52803",
+              "order": 5,
+              "ui_restrictions": []
+            },
+            "retry_count": {
+              "depends_on": [],
+              "display": "numeric",
+              "tooltip": null,
+              "default_value": 3,
+              "label": "Retries per request",
+              "sensitive": false,
+              "type": "int",
+              "required": false,
+              "options": [],
+              "validations": [],
+              "value": 3,
+              "order": 10,
+              "ui_restrictions": [
+                "advanced"
+              ]
+            },
+            "spaces": {
+              "depends_on": [],
+              "display": "textarea",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence space keys",
+              "sensitive": false,
+              "type": "list",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "*",
+              "order": 7,
+              "ui_restrictions": []
+            },
+            "data_source": {
+              "depends_on": [],
+              "display": "dropdown",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence data source",
+              "sensitive": false,
+              "type": "str",
+              "required": true,
+              "options": [
+                {
+                  "label": "Confluence Cloud",
+                  "value": "confluence_cloud"
+                },
+                {
+                  "label": "Confluence Server",
+                  "value": "confluence_server"
+                }
+              ],
+              "validations": [],
+              "value": "confluence_cloud",
+              "order": 1,
+              "ui_restrictions": []
+            },
+            "username": {
+              "depends_on": [
+                {
+                  "field": "data_source",
+                  "value": "confluence_server"
+                }
+              ],
+              "display": "text",
+              "tooltip": null,
+              "default_value": null,
+              "label": "Confluence Server username",
+              "sensitive": false,
+              "type": "str",
+              "required": true,
+              "options": [],
+              "validations": [],
+              "value": "admin",
+              "order": 2,
+              "ui_restrictions": []
+            }
+          },
+          "custom_scheduling": {},
+          "description": null,
+          "error": null,
+          "features": null,
+          "filtering": [
+            {
+              "active": {
+                "advanced_snippet": {
+                  "created_at": "2023-05-04T12:45:46.095Z",
+                  "updated_at": "2023-05-04T12:45:46.095Z",
+                  "value": {}
+                },
+                "rules": [
+                  {
+                    "created_at": "2023-05-04T12:45:46.095Z",
+                    "field": "_",
+                    "id": "DEFAULT",
+                    "order": 0,
+                    "policy": "include",
+                    "rule": "regex",
+                    "updated_at": "2023-05-04T12:45:46.095Z",
+                    "value": ".*"
+                  }
+                ],
+                "validation": {
+                  "errors": [],
+                  "state": "valid"
+                }
+              },
+              "domain": "DEFAULT",
+              "draft": {
+                "advanced_snippet": {
+                  "created_at": "2023-05-04T12:45:46.095Z",
+                  "updated_at": "2023-05-04T12:45:46.095Z",
+                  "value": {}
+                },
+                "rules": [
+                  {
+                    "created_at": "2023-05-04T12:45:46.095Z",
+                    "field": "_",
+                    "id": "DEFAULT",
+                    "order": 0,
+                    "policy": "include",
+                    "rule": "regex",
+                    "updated_at": "2023-05-04T12:45:46.095Z",
+                    "value": ".*"
+                  }
+                ],
+                "validation": {
+                  "errors": [],
+                  "state": "valid"
+                }
+              }
+            }
+          ],
+          "index_name": "search-confluence",
+          "is_native": false,
+          "language": null,
+          "last_seen": "2023-05-04T13:08:16.222290+00:00",
+          "last_sync_error": null,
+          "last_sync_scheduled_at": null,
+          "last_sync_status": null,
+          "last_synced": null,
+          "name": "confluence",
+          "pipeline": {
+            "extract_binary_content": true,
+            "name": "ent-search-generic-ingestion",
+            "reduce_whitespace": true,
+            "run_ml_inference": true
+          },
+          "scheduling": {
+            "enabled": true,
+            "interval": "0 48 * * * ?"
+          },
+          "service_type": "custom",
+          "status": "configured",
+          "sync_now": false
+        }
+      }
+    ]
+  }
+}
