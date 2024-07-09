@@ -85,4 +85,3 @@ We can also include figures:
   - rst can also be converted into XML
   - the recommended file extension for rst is ``.txt``
 
-updated
